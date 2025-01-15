@@ -1,0 +1,328 @@
+/* @font-face {
+  font-family: Proxima_Nova;
+  src: url("assets/fonts/fonts/Mark Simonson  Proxima Nova Black Italic.otf");
+} */
+
+:root {
+  --color-primary: #888;
+  --color-secondary: #737373;
+  --default-font-size: 0.6rem;
+  --color-tertiary: #1877f2;
+  --color-quaternary: #ffffff;
+  --sky-blue: #87ceeb;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: Proxima_Nova; */
+  font-size: var(--default-font-size);
+  /* color: var(--color-default-text); */
+  font-weight: 400;
+  line-height: 1.25rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container-fluid {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "GeistSans", sans-serif;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+.nav_links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  transition: color 0.3s ease;
+}
+.nav_links a:hover {
+  color: var(--color-tertiary);
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.image_container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+.image_container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 450px;
+  color: var(--color-secondary);
+}
+
+.search-input {
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  width: 100%;
+  border: 0.025rem var(--color-primary);
+  outline: 0.025rem solid var(--color-secondary);
+  font-size: var(--default-font-size);
+}
+
+.search-icon {
+  position: absolute;
+  left: 90%;
+  top: 32%;
+  transform: translateY(-50%, -50%);
+  color: var(--color-secondary);
+}
+
+.cart_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.025rem solid var(--color-primary);
+  padding: 0.4rem;
+  border-radius: 0.1rem;
+  vertical-align: middle;
+  position: relative;
+  width: 2rem; /* Set a fixed width */
+  height: 2rem; /* Set a fixed height, equal to width */
+}
+
+.cart-badge {
+  position: absolute;
+  top: -0.9em;
+  right: -0.5rem;
+  background-color: var(--color-tertiary);
+  color: var(--color-quaternary);
+  border-radius: 0;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.cart-button {
+  all: unset;
+}
+
+/* .sign-in-btn {
+  background: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: none;
+} */
+
+.sign-in-btn {
+  background-color: var(--black); /* Background color */
+  color: var(--color-quaternary); /* Text color */
+  border: 2px solid var(--color-primary); /* Border styling */
+  padding: 0.2rem 0.5rem; /* Adjust padding for size */
+  font-size: 0.7rem; /* Font size */
+  border-radius: 0.3rem; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sign-in-btn:hover {
+  background-color: var(--color-primary); /* Background color on hover */
+  color: white; /* Text color on hover */
+  border-color: var(--color-tertiary); /* Border color on hover */
+}
+
+.nav_left {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.nav_right {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.hamburger-menu {
+  display: none;
+}
+.store-name {
+  display: none;
+}
+
+/*responsive design for tablets */
+@media (max-width: 1024px) and (min-width: 600px) {
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "GeistSans", sans-serif;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .nav_links {
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .search-container {
+    font-size: var(--default-font-size);
+  }
+
+  .image_container {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .image_container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav_left {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .nav_right {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .cart_icon {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .cart-badge {
+    top: -0.8rem;
+    right: -0.6rem;
+  }
+
+  .search-input {
+    font-size: 0.2rem;
+  }
+  .sign-in-btn {
+    white-space: nowrap;
+  }
+}
+
+/*responsive design for mobiles */
+
+@media (max-width: 599px) and (min-width: 320px) {
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    flex-wrap: nowrap;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    border: 0.025rem solid var(--color-primary);
+    border-radius: 0.2rem;
+    padding: 0.6rem;
+  }
+
+  .store-name {
+    display: block;
+    white-space: nowrap;
+    font-size: 0.6rem;
+  }
+
+  .nav_links {
+    display: none;
+  }
+
+  .search-container {
+    display: none;
+  }
+  .sign-in-btn {
+    display: none;
+  }
+  .logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* 
+  label #btn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li,
+  sign-in-btn {
+    display: block;
+    margin: 50px 0;
+    lineheight: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  #check:checked ~ label #btn {
+    display: block;
+  }
+
+  #check:checked ~ label #cancle {
+    display: block;
+  }
+} */
