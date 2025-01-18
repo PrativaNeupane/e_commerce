@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ecomerce App</title>
+  <link href="https://fonts.googleapis.com/css2?family=GeistSans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./src/style.css">
+
+</head>
+
+<body>
+  <header>
+
+    <div class="container-fluid">
+      <div class="nav_container">
+        <div class="nav_left">
+
+          <!--hamburger-menu-->
+          <div class="hamburger-menu" id="hamburger-menu" onclick="togglemenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <!--logo image-->
+          <div class="logo_container">
+            <a href="/" class="logo-link">
+              <div class="image_container">
+                <img src="./assets/projectlogo.jpg" alt="Logo" width="150" height="auto">
+              </div>
+            </a>
+          </div>
+          <h1><span class="store-name">ACME STORE</span></h1>
+
+          <nav>
+            <ul class="nav_links">
+              <li><a href="ALL">ALL</a></li>
+              <li><a href="shirts">Shirts</a></li>
+              <li><a href="stickers">Stickers</a></li>
+            </ul>
+
+          </nav>
+
+        </div>
+
+
+
+        <!--search bar-->
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search for products.....">
+          <button type="submit"></button>
+          <i class="fas fa-search search-icon"></i>
+        </div>
+
+
+        <div class="nav_right">
+          <!--cart Icon-->
+          <div class="cart_icon">
+            <button class="cart-button">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <span class="cart-badge">1</span>
+          </div>
+          <!--button-container-->
+          <div class="button-container">
+            <button class="sign-in-btn"> Sign In</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </header>
+
+  <body>
+    <form>
+      <div class="sign-in-form">
+        <div class="head-text">
+          <h1> SIGN IN</h1>
+        </div>
+        <div class="Email-form">
+          <input type="email" placeholder="customer4@gmail.com" required>
+        </div>
+
+        <!-- Password Input with Eye Icon -->
+        <div class="password-form">
+          <input type="password" id="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword()">👁</span>
+        </div>
+
+        <!-- Remember Me Checkbox -->
+        <div class="checkbox-group">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit" class="log">Login</button>
+
+        <!-- Divider with OR -->
+        <div class="divider">
+          <span>OR</span>
+        </div>
+
+        <!-- Google and Facebook Login Links -->
+        <div class="social-login">
+          <a href="#" class="google-btn">Continue with Google</a>
+          <a href="#" class="facebook-btn">Continue with Facebook</a>
+        </div>
+
+      </div>
+
+    </form>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+
+
+  </body>
+
+
+
+</html>
