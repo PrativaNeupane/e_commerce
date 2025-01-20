@@ -15,25 +15,26 @@
 
 <body>
   <header>
-
     <div class="container-fluid">
       <div class="nav_container">
         <div class="nav_left">
 
           <!--hamburger-menu-->
           <div class="hamburger-menu" id="hamburger-menu" onclick="togglemenu()">
-            <i class="fas fa-bars"></i>
+            <button>
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
 
           <!--logo image-->
           <div class="logo_container">
             <a href="/" class="logo-link">
               <div class="image_container">
-                <img src="./assets/projectlogo.jpg" alt="Logo" width="150" height="auto">
+                <img src="./assets/projectlogo.jpg" alt="Logo">
               </div>
             </a>
           </div>
-          <h1><span class="store-name">ACME STORE</span></h1>
+          <h1 class="store-name">ACME STORE</h1>
 
           <nav>
             <ul class="nav_links">
@@ -41,9 +42,7 @@
               <li><a href="shirts">Shirts</a></li>
               <li><a href="stickers">Stickers</a></li>
             </ul>
-
           </nav>
-
         </div>
 
 
@@ -51,7 +50,6 @@
         <!--search bar-->
         <div class="search-container">
           <input type="text" class="search-input" placeholder="Search for products.....">
-          <button type="submit"></button>
           <i class="fas fa-search search-icon"></i>
         </div>
 
@@ -64,19 +62,18 @@
             </button>
             <span class="cart-badge">1</span>
           </div>
+
           <!--button-container-->
           <div class="button-container">
             <button class="sign-in-btn"> Sign In</button>
           </div>
         </div>
       </div>
-
-
     </div>
-
   </header>
 
-  <body>
+  <!-- ignore this html for now. we will use it in future -->
+  <main style="display: none;">
     <form>
       <div class="sign-in-form">
         <div class="head-text">
@@ -117,11 +114,8 @@
     </form>
 
     </div>
-    <script type="module" src="/src/main.js"></script>
-
-
-  </body>
-
-
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
 
 </html>
