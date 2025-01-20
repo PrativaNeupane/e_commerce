@@ -16,11 +16,12 @@
 }
 
 body {
-  font-family: "Geist", serif;
+  font-family: "GeistSans", sans-serif;
   font-size: var(--default-font-size);
   color: var(--color-default-text);
   font-weight: 400;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 .container-fluid {
@@ -102,11 +103,81 @@ button {
   border: 1px solid #888;
   padding: 0.5rem 0.9rem;
   border-radius: 4px;
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -9px;
+  right: -14px;
+  transform: translateY(-4%);
+  background-color: #1877f2;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 9px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
   .button-container {
-    display: block;
+    display: flex;
+  }
+
+  .sign-in-btn {
+    background-color: #cecec9;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.2rem 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .sign-in-btn:hover {
+    background-color: #000000;
+    color: #f0f0f0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+  .sign-in-btn:active {
+    transform: scale(1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .cart_icon {
+    border: 1px solid #888;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -9px;
+    right: -14px;
+    transform: translateY(-4%);
+    background-color: #1877f2;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 9px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .nav_right {
+    display: flex;
+    gap: 1rem;
   }
 }
 
@@ -117,5 +188,47 @@ button {
 
   .search-container {
     display: block;
+  }
+  .nav_container {
+    display: block;
+  }
+  .nav_links {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav_left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 450px;
+    color: var(--color-secondary);
+  }
+
+  .search-input {
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.7rem;
+    width: 100%;
+    border: 0.025rem var(--color-primary);
+    outline: 0.025rem solid var(--color-secondary);
+    font-size: var(--default-font-size);
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    color: var(--color-secondary);
   }
 }
