@@ -6,6 +6,7 @@
   --color-quaternary: #ffffff;
   --color-sky-blue: #87ceeb;
   --color-black: #000000;
+  --body-line-height: 1.5;
 }
 
 * {
@@ -15,6 +16,7 @@
 }
 
 body {
+  font-family: "Geist", serif;
   font-size: var(--default-font-size);
   color: var(--color-default-text);
   font-weight: 400;
@@ -25,4 +27,95 @@ body {
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.logo_image {
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+}
+
+.logo_image img {
+  border-radius: 12px;
+}
+
+.store-name {
+  font-size: var(--default-font-size);
+}
+
+.nav_left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav_container {
+  display: none;
+}
+
+.search-container {
+  display: none;
+}
+
+.button-container {
+  display: none;
+}
+
+.hamburger-menu {
+  border: 1px solid #888;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+}
+
+.cart_icon {
+  border: 1px solid #888;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .search-container {
+    display: block;
+  }
 }

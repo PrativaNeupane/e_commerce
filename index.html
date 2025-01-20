@@ -16,27 +16,26 @@
 <body>
   <header>
     <div class="container-fluid">
-      <div class="nav_container">
+      <div class="header_content">
+        <!--hamburger-menu-->
+        <div class="hamburger-menu" id="hamburger-menu" onclick="togglemenu()">
+          <button>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
         <div class="nav_left">
-
-          <!--hamburger-menu-->
-          <div class="hamburger-menu" id="hamburger-menu" onclick="togglemenu()">
-            <button>
-              <i class="fas fa-bars"></i>
-            </button>
-          </div>
-
           <!--logo image-->
           <div class="logo_container">
             <a href="/" class="logo-link">
-              <div class="image_container">
-                <img src="./assets/projectlogo.jpg" alt="Logo">
+              <div class="logo_image">
+                <img src="./public/assests/images/logo_image.jpg" alt="Logo">
               </div>
             </a>
+            <h1 class="store-name">ACME STORE</h1>
           </div>
-          <h1 class="store-name">ACME STORE</h1>
 
-          <nav>
+          <nav class="nav_container">
             <ul class="nav_links">
               <li><a href="ALL">ALL</a></li>
               <li><a href="shirts">Shirts</a></li>
@@ -60,7 +59,7 @@
             <button class="cart-button">
               <i class="fas fa-shopping-cart"></i>
             </button>
-            <span class="cart-badge">1</span>
+            <!-- <span class="cart-badge">1</span> -->
           </div>
 
           <!--button-container-->
