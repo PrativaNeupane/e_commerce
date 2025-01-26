@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <div class="header_content">
         <!--hamburger-menu-->
-        <div class="hamburger-menu" id="hamburger-menu" onclick="togglemenu()">
+        <div class="hamburger-menu" id="hamburger-menu">
           <button>
             <i class="fas fa-bars"></i>
           </button>
@@ -64,7 +64,7 @@
 
           <!--button-container-->
           <div class="button-container">
-            <button class="sign-in-btn"> Sign In</button>
+            <button class="sign-in-btn" id="button-container"> Sign In</button>
           </div>
         </div>
       </div>
@@ -88,48 +88,62 @@
     </div>
   </header>
 
-  <!-- ignore this html for now. we will use it in future -->
-  <main style="display: none;">
-    <form>
-      <div class="sign-in-form">
-        <div class="head-text">
-          <h1> SIGN IN</h1>
-        </div>
-        <div class="Email-form">
-          <input type="email" placeholder="customer4@gmail.com" required>
-        </div>
-
-        <!-- Password Input with Eye Icon -->
-        <div class="password-form">
-          <input type="password" id="password" placeholder="Password" required>
-          <span class="toggle-password" onclick="togglePassword()">👁</span>
-        </div>
-
-        <!-- Remember Me Checkbox -->
-        <div class="checkbox-group">
-          <input type="checkbox" id="rememberMe">
-          <label for="rememberMe">Remember Me</label>
-        </div>
-
-        <!-- Login Button -->
-        <button type="submit" class="log">Login</button>
-
-        <!-- Divider with OR -->
-        <div class="divider">
-          <span>OR</span>
+  <body>
+    <div class="flip-card-container" id="flipCardContainer">
+      <input type="checkbox" id="flip-checkbox" class="flip-checkbox">
+      <label for="flip-checkbox" class="flip-label">Click to sign in/sign up</label>
+      <div class="flip-card">
+        <!-- Front Side: Sign In -->
+        <div class="flip-card-front">
+          <form>
+            <div class="sign-in-form">
+              <div class="head-text">
+                <h1>SIGN IN</h1>
+              </div>
+              <div class="email-form">
+                <input type="email" class="input-box" placeholder="customer4@gmail.com" required>
+              </div>
+              <div class="password-form">
+                <input type="password" class="input-box" placeholder="Password" required>
+              </div>
+              <button type="submit" class="log sig-in">Login</button>
+            </div>
+          </form>
         </div>
 
-        <!-- Google and Facebook Login Links -->
-        <div class="social-login">
-          <a href="#" class="google-btn">Continue with Google</a>
-          <a href="#" class="facebook-btn">Continue with Facebook</a>
-        </div>
+        <!-- Back Side: Sign Up Button -->
+        <div class="flip-card-back">
+          <div class="sign-up-form">
+            <div class="signup-text">
+              <h1>SIGN UP</h1>
+            </div>
 
+            <form>
+              <div class="form-group" id="form-name">
+                <label for="fullname">Full Name</label>
+                <input type="text" class="sign-up-boxes" name="fullname" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="sign-up-boxes" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="sign-up-boxes" name="password" required>
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" class="sign-up-boxes" name="confirm-password" required>
+              </div>
+              <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+          </div>
+        </div>
       </div>
-    </form>
     </div>
-  </main>
-  <script type="module" src="/src/main.js"></script>
-</body>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 
 </html>
