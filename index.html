@@ -90,8 +90,11 @@
 
   <body>
     <div class="flip-card-container" id="flipCardContainer">
-      <input type="checkbox" id="flip-checkbox" class="flip-checkbox">
-      <label for="flip-checkbox" class="flip-label">Click to sign in/sign up</label>
+      <!-- <input type="checkbox" id="flip-checkbox" class="flip-checkbox"> -->
+      <button class="flip-card-button" id="flip-card-button">
+        Click here to signup
+      </button>
+      <button class="flip-cross-btn" id="flip-cross-btn">&times;</button>
       <div class="flip-card">
         <!-- Front Side: Sign In -->
         <div class="flip-card-front">
@@ -106,7 +109,7 @@
               <div class="password-form">
                 <input type="password" class="input-box" placeholder="Password" required>
               </div>
-              <button type="submit" class="log sig-in">Login</button>
+              <button type="submit" class="sig-in-form-btn">Login</button>
             </div>
           </form>
         </div>
@@ -119,24 +122,17 @@
             </div>
 
             <form>
-              <div class="form-group" id="form-name">
+              <div class="sign-up-form-group">
                 <label for="fullname">Full Name</label>
                 <input type="text" class="sign-up-boxes" name="fullname" required>
-              </div>
-
-              <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" class="sign-up-boxes" name="email" required>
-              </div>
-              <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="sign-up-boxes" name="password" required>
-              </div>
-              <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" class="sign-up-boxes" name="confirm-password" required>
               </div>
-              <button type="submit" class="submit-btn">Sign Up</button>
+              <button type="submit" class="sign-up-btn">Sign Up</button>
             </form>
           </div>
         </div>

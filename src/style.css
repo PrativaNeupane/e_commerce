@@ -132,7 +132,7 @@ button {
 }
 
 .sign-in-btn:hover {
-  background-color: #5e7abf;
+  background-color: #0000ff;
   color: #f0f0f0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
@@ -225,39 +225,59 @@ button {
   gap: 1rem;
   margin-top: 1rem;
 }
-.flip-card-front {
-  border: 2px solid black;
-  width: 15rem;
-  height: 15rem;
+
+.flip-card-container {
+  width: 25rem;
+  height: 25rem;
+  perspective: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eaf1f1;
+  position: absolute;
+  left: 73%;
+  margin-top: 5rem;
 }
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.flip-card-front {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.input-box {
+  width: 280px;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.sig-in-form-btn {
+  border: 2px solid black;
+  width: 280px;
+  height: 2.5rem;
+  background-color: #0abb4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.sig-in-form-btn:hover {
+  background-color: #0000ff;
+}
+
 .sign-in-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
-}
-.input-box {
-  width: 220px;
-  height: 3rem;
-  border-radius: 3rem;
-}
-.sig-in {
-  border: 2px solid black;
-  width: 100px;
-  height: 30px;
-  background-color: #76585800;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-}
-.sig-in:hover {
-  background-color: #65896da6;
 }
 
 .flip-card-back {
@@ -267,60 +287,80 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eaf1f1;
+  background-color: #FFFFFF.;
 }
+
+.sign-up-boxes {
+  width: 280px;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 7px;
+}
+
 .sign-up-form {
+  border: 2px solid black;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.form-group {
-  width: 220px;
-  height: 3rem;
-  border-radius: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
 }
 
-.submit-btn {
+.sign-up-btn {
   border: 2px solid black;
-  width: 80px;
-  height: 40px;
-  background-color: #76585800;
+  width: 280px;
+  height: 2.5rem;
+  background-color: #0abb4b;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  margin-top: 1rem;
 }
-.submit-btn:hover {
-  background-color: #65896da6;
+.sign-up-btn:hover {
+  background-color: #0000ff;
 }
-.flip-card-container {
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.flip-card {
-  width: 100%;
-  height: 100%;
-  position: relative;
 
-  transform-style: preserve-3d;
+.flip-card-button {
+  border: 2px;
+  background-color: #000000;
+  color: #ffffff;
+  width: 9rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
 }
-.flip-card-front {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
+
+.flip-card-button:hover {
+  background-color: #0000ff;
+  color: #f0f0f0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+.flip-cross-btn {
+  position: relative;
+  border: 2px;
+  background-color: #ff0000;
+  color: #ffffff;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: bold;
+  left: 50%;
+}
+.flip-cross-btn:hover {
+  background-color: #0000ff;
+  color: #f0f0f0;
 }
 
 .flip-checkbox:checked ~ .flip-card {
@@ -329,6 +369,7 @@ button {
 
 .flip-card-back {
   transform: rotateY(180deg);
+  border-radius: 10px;
 }
 
 .flip-card-front,
@@ -339,11 +380,11 @@ button {
   position: absolute;
 }
 
-#flipCardContainer {
+.flip-card-container {
   display: none;
 }
 
-#flipCardContainer.show {
+.show {
   display: block;
 }
 
@@ -401,3 +442,7 @@ button {
     width: 460px;
   }
 }
+
+/* .hide-element {
+  display: none;
+} */

@@ -19,10 +19,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Functionality for the sign-in button
   const loginbtn = document.getElementById("button-container");
-  const flipcard = document.getElementById("flipCardContainer");
+  const flipcrossbtn = document.getElementById("flip-cross-btn");
+  const flipCardContainer = document.getElementById("flipCardContainer");
+  const flipCard = document.querySelector(".flip-card");
+  let isVisible = false;
 
   loginbtn.addEventListener("click", function () {
-    // Toggle the visibility of the flipcard
-    flipcard.classList.toggle("show");
+    if (!isVisible) {
+      flipCardContainer.classList.add("show");
+      isVisible = true;
+    }
+  });
+  flipcrossbtn.addEventListener("click", function () {
+    flipCardContainer.classList.remove("show");
+    isVisible = false;
+  });
+//fuctionality to flip the card
+  const flipcardbtn = document.getElementById("flip-card-button");
+
+  let showLoginForm = true;
+  flipcardbtn.addEventListener("click", function () {
+    if (showLoginForm) {
+      flipCard.style.transform = "rotateY(0deg)";
+      showLoginForm = false;
+    } else {
+      flipCard.style.transform = "rotateY(180deg)";
+      showLoginForm = true;
+    }
+  });
+
+  //to change the text each time we click on the button
+  const flipCardButton = document.getElementById("flip-card-button");
+
+  flipCardButton.addEventListener("click", function () {
+    if (flipCardButton.innerHTML === "Click here to Sign Up") {
+      flipCardButton.innerHTML = "Click here to Sign In";
+    } else {
+      flipCardButton.innerHTML = "Click here to Sign Up";
+    }
   });
 });
