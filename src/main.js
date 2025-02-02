@@ -30,11 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
       isVisible = true;
     }
   });
+  //functionality to remove the flip container
   flipcrossbtn.addEventListener("click", function () {
     flipCardContainer.classList.remove("show");
     isVisible = false;
   });
-//fuctionality to flip the card
+  //fuctionality to flip the card
   const flipcardbtn = document.getElementById("flip-card-button");
 
   let showLoginForm = true;
