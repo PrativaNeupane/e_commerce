@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <div class="header_content">
         <!--hamburger-menu-->
-        <div class="hamburger-menu" id="hamburger-menu" onclick="togglemenu()">
+        <div class="hamburger-menu" id="hamburger-menu">
           <button>
             <i class="fas fa-bars"></i>
           </button>
@@ -29,7 +29,7 @@
           <div class="logo_container">
             <a href="/" class="logo-link">
               <div class="logo_image">
-                <img src="./public/assests/images/logo_image.jpg" alt="Logo">
+                <img src="/assests/images/logo_image.jpg" alt="Logo">
               </div>
             </a>
             <h1 class="store-name">ACME STORE</h1>
@@ -59,61 +59,85 @@
             <button class="cart-button">
               <i class="fas fa-shopping-cart"></i>
             </button>
-            <!-- <span class="cart-badge">1</span> -->
+            <span class="cart-badge">1</span>
           </div>
 
           <!--button-container-->
           <div class="button-container">
-            <button class="sign-in-btn"> Sign In</button>
+            <button class="sign-in-btn" id="button-container"> Sign In</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- mobile nav -->
+    <div class="mb_navbar" id="mb_navbar">
+      <button id="cross_btn">
+        <i class="fas fa-times cross-"></i>
+      </button>
+      <div class="mb-search-container">
+        <input type="text" class="mb-search-input" placeholder="Search for products.....">
+        <i class="fas fa-search mb-search-icon"></i>
+      </div>
+      <nav class="mb_nav_container">
+        <ul class="mb_nav_links">
+          <li><a href="ALL">ALL</a></li>
+          <li><a href="shirts">Shirts</a></li>
+          <li><a href="stickers">Stickers</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- ignore this html for now. we will use it in future -->
-  <main style="display: none;">
-    <form>
-      <div class="sign-in-form">
-        <div class="head-text">
-          <h1> SIGN IN</h1>
-        </div>
-        <div class="Email-form">
-          <input type="email" placeholder="customer4@gmail.com" required>
-        </div>
-
-        <!-- Password Input with Eye Icon -->
-        <div class="password-form">
-          <input type="password" id="password" placeholder="Password" required>
-          <span class="toggle-password" onclick="togglePassword()">👁</span>
-        </div>
-
-        <!-- Remember Me Checkbox -->
-        <div class="checkbox-group">
-          <input type="checkbox" id="rememberMe">
-          <label for="rememberMe">Remember Me</label>
-        </div>
-
-        <!-- Login Button -->
-        <button type="submit" class="log">Login</button>
-
-        <!-- Divider with OR -->
-        <div class="divider">
-          <span>OR</span>
-        </div>
-
-        <!-- Google and Facebook Login Links -->
-        <div class="social-login">
-          <a href="#" class="google-btn">Continue with Google</a>
-          <a href="#" class="facebook-btn">Continue with Facebook</a>
-        </div>
-
+  <div class="flip-card-container" id="flipCardContainer">
+    <!-- <input type="checkbox" id="flip-checkbox" class="flip-checkbox"> -->
+    <button class="flip-card-button" id="flip-card-button">
+      Click here to signup
+    </button>
+    <button class="flip-cross-btn" id="flip-cross-btn">&times;</button>
+    <div class="flip-card">
+      <!-- Front Side: Sign In -->
+      <div class="flip-card-front">
+        <form>
+          <div class="sign-in-form">
+            <div class="head-text">
+              <h1>SIGN IN</h1>
+            </div>
+            <div class="email-form">
+              <input type="email" class="input-box" placeholder="customer4@gmail.com" required>
+            </div>
+            <div class="password-form">
+              <input type="password" class="input-box" placeholder="Password" required>
+            </div>
+            <button type="submit" class="sig-in-form-btn">Login</button>
+          </div>
+        </form>
       </div>
 
-    </form>
+      <!-- Back Side: Sign Up Button -->
+      <div class="flip-card-back">
+        <div class="sign-up-form">
+          <div class="signup-text">
+            <h1>SIGN UP</h1>
+          </div>
 
+          <form>
+            <div class="sign-up-form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="sign-up-boxes" name="fullname" required>
+              <label for="email">Email Address</label>
+              <input type="email" class="sign-up-boxes" name="email" required>
+              <label for="password">Password</label>
+              <input type="password" class="sign-up-boxes" name="password" required>
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" class="sign-up-boxes" name="confirm-password" required>
+            </div>
+            <button type="submit" class="sign-up-btn">Sign Up</button>
+          </form>
+        </div>
+      </div>
     </div>
-  </main>
+  </div>
+
   <script type="module" src="/src/main.js"></script>
 </body>
 
