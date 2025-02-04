@@ -88,58 +88,57 @@
     </div>
   </header>
 
-  <body>
-    <div class="flip-card-container" id="flipCardContainer">
-      <!-- <input type="checkbox" id="flip-checkbox" class="flip-checkbox"> -->
-      <button class="flip-card-button" id="flip-card-button">
-        Click here to signup
-      </button>
-      <button class="flip-cross-btn" id="flip-cross-btn">&times;</button>
-      <div class="flip-card">
-        <!-- Front Side: Sign In -->
-        <div class="flip-card-front">
-          <form>
-            <div class="sign-in-form">
-              <div class="head-text">
-                <h1>SIGN IN</h1>
-              </div>
-              <div class="email-form">
-                <input type="email" class="input-box" placeholder="customer4@gmail.com" required>
-              </div>
-              <div class="password-form">
-                <input type="password" class="input-box" placeholder="Password" required>
-              </div>
-              <button type="submit" class="sig-in-form-btn">Login</button>
+  <div class="flip-card-container" id="flipCardContainer">
+    <!-- <input type="checkbox" id="flip-checkbox" class="flip-checkbox"> -->
+    <button class="flip-card-button" id="flip-card-button">
+      Click here to signup
+    </button>
+    <button class="flip-cross-btn" id="flip-cross-btn">&times;</button>
+    <div class="flip-card">
+      <!-- Front Side: Sign In -->
+      <div class="flip-card-front">
+        <form>
+          <div class="sign-in-form">
+            <div class="head-text">
+              <h1>SIGN IN</h1>
             </div>
-          </form>
-        </div>
-
-        <!-- Back Side: Sign Up Button -->
-        <div class="flip-card-back">
-          <div class="sign-up-form">
-            <div class="signup-text">
-              <h1>SIGN UP</h1>
+            <div class="email-form">
+              <input type="email" class="input-box" placeholder="customer4@gmail.com" required>
             </div>
-
-            <form>
-              <div class="sign-up-form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" class="sign-up-boxes" name="fullname" required>
-                <label for="email">Email Address</label>
-                <input type="email" class="sign-up-boxes" name="email" required>
-                <label for="password">Password</label>
-                <input type="password" class="sign-up-boxes" name="password" required>
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" class="sign-up-boxes" name="confirm-password" required>
-              </div>
-              <button type="submit" class="sign-up-btn">Sign Up</button>
-            </form>
+            <div class="password-form">
+              <input type="password" class="input-box" placeholder="Password" required>
+            </div>
+            <button type="submit" class="sig-in-form-btn">Login</button>
           </div>
+        </form>
+      </div>
+
+      <!-- Back Side: Sign Up Button -->
+      <div class="flip-card-back">
+        <div class="sign-up-form">
+          <div class="signup-text">
+            <h1>SIGN UP</h1>
+          </div>
+
+          <form>
+            <div class="sign-up-form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="sign-up-boxes" name="fullname" required>
+              <label for="email">Email Address</label>
+              <input type="email" class="sign-up-boxes" name="email" required>
+              <label for="password">Password</label>
+              <input type="password" class="sign-up-boxes" name="password" required>
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" class="sign-up-boxes" name="confirm-password" required>
+            </div>
+            <button type="submit" class="sign-up-btn">Sign Up</button>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
 
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latestui</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .siginui {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: fixed;
+            width: 100vw;
+            border: 2px solid red;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0, 0.5);
+            /* display: none; */
+        }
+
+        .siginuicontent {
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            position: relative;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="siginbtn">
+        <button>
+            sigin
+        </button>
+    </div>
+    <div class="siginui">
+        <div class="siginuicontent">
+            <button class="cross-btn">x</button>
+
+            <div>
+                <label for="fullname">Full Name</label>
+                <input type="text" class="sign-up-boxes" name="fullname" required />
+
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" class="sign-up-boxes" name="email" required />
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+    <script>
+
+
+        const crossBtn = document.querySelector(".cross-btn");
+        const signInBtn = document.querySelector(".siginbtn");
+        const modal = document.querySelector(".siginui");
+
+        signInBtn.addEventListener("click", function () {
+            modal.style.display = "flex"
+        })
+
+        crossBtn.addEventListener("click", function () {
+            console.log('corss sjdklfjsk')
+            modal.style.display = "none";
+        })
+
+
+    </script>
+
+</body>
+
+</html>
