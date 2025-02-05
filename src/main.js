@@ -19,44 +19,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Functionality for the sign-in button
   const loginbtn = document.getElementById("button-container");
-  const flipcrossbtn = document.getElementById("flip-cross-btn");
-  const flipCardContainer = document.getElementById("flipCardContainer");
+  const flipcrossbtn = document.querySelectorAll(".flip-cross-btn");
+  const flipCardContainer = document.querySelector(".modal-container");
   const flipCard = document.querySelector(".flip-card");
-  let isVisible = false;
 
   loginbtn.addEventListener("click", function () {
-    if (!isVisible) {
-      flipCardContainer.classList.add("show");
-      isVisible = true;
-    }
-  });
-  //functionality to remove the flip container
-  flipcrossbtn.addEventListener("click", function () {
-    flipCardContainer.classList.remove("show");
-    isVisible = false;
-  });
-  //fuctionality to flip the card
-  const flipcardbtn = document.getElementById("flip-card-button");
-
-  let showLoginForm = true;
-  flipcardbtn.addEventListener("click", function () {
-    if (showLoginForm) {
-      flipCard.style.transform = "rotateY(0deg)";
-      showLoginForm = false;
-    } else {
-      flipCard.style.transform = "rotateY(180deg)";
-      showLoginForm = true;
-    }
+    flipCardContainer.style.display = "flex";
   });
 
-  //to change the text each time we click on the button
-  const flipCardButton = document.getElementById("flip-card-button");
+  // Functionality to remove the flip container
 
-  flipCardButton.addEventListener("click", function () {
-    if (flipCardButton.innerHTML === "Click here to Sign Up") {
-      flipCardButton.innerHTML = "Click here to Sign In";
-    } else {
-      flipCardButton.innerHTML = "Click here to Sign Up";
-    }
+  flipcrossbtn.forEach((crossBtn) => {
+    crossBtn.addEventListener("click", function () {
+      flipCardContainer.style.display = "none";
+    });
+  });
+
+  // Functionality to flip the card
+  const switchButtons = document.querySelectorAll(".switch");
+  let isFlipped = false;
+
+  switchButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const flipCard = document.querySelector(".flip-card-inner");
+
+      // Toggle the flip state
+      if (isFlipped) {
+        flipCard.style.transform = "rotateY(0deg)";
+      } else {
+        flipCard.style.transform = "rotateY(180deg)";
+      }
+
+      isFlipped = !isFlipped;
+    });
   });
 });

@@ -1,144 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ecomerce App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=GeistSans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ecomerce App</title>
-  <link href="https://fonts.googleapis.com/css2?family=GeistSans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./src/style.css">
-
-</head>
-
-<body>
-  <header>
-    <div class="container-fluid">
-      <div class="header_content">
-        <!--hamburger-menu-->
-        <div class="hamburger-menu" id="hamburger-menu">
-          <button>
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-
-        <div class="nav_left">
-          <!--logo image-->
-          <div class="logo_container">
-            <a href="/" class="logo-link">
-              <div class="logo_image">
-                <img src="/assests/images/logo_image.jpg" alt="Logo">
-              </div>
-            </a>
-            <h1 class="store-name">ACME STORE</h1>
-          </div>
-
-          <nav class="nav_container">
-            <ul class="nav_links">
-              <li><a href="ALL">ALL</a></li>
-              <li><a href="shirts">Shirts</a></li>
-              <li><a href="stickers">Stickers</a></li>
-            </ul>
-          </nav>
-        </div>
-
-
-
-        <!--search bar-->
-        <div class="search-container">
-          <input type="text" class="search-input" placeholder="Search for products.....">
-          <i class="fas fa-search search-icon"></i>
-        </div>
-
-
-        <div class="nav_right">
-          <!--cart Icon-->
-          <div class="cart_icon">
-            <button class="cart-button">
-              <i class="fas fa-shopping-cart"></i>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div class="header_content">
+          <!--hamburger-menu-->
+          <div class="hamburger-menu" id="hamburger-menu">
+            <button>
+              <i class="fas fa-bars"></i>
             </button>
-            <span class="cart-badge">1</span>
           </div>
 
-          <!--button-container-->
-          <div class="button-container">
-            <button class="sign-in-btn" id="button-container"> Sign In</button>
+          <div class="nav_left">
+            <!--logo image-->
+            <div class="logo_container">
+              <a href="/" class="logo-link">
+                <div class="logo_image">
+                  <img src="/assests/images/logo_image.jpg" alt="Logo" />
+                </div>
+              </a>
+              <h1 class="store-name">ACME STORE</h1>
+            </div>
+
+            <nav class="nav_container">
+              <ul class="nav_links">
+                <li><a href="ALL">ALL</a></li>
+                <li><a href="shirts">Shirts</a></li>
+                <li><a href="stickers">Stickers</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!--search bar-->
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search for products....."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+
+          <div class="nav_right">
+            <!--cart Icon-->
+            <div class="cart_icon">
+              <button class="cart-button">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+              <span class="cart-badge">1</span>
+            </div>
+
+            <!--button-container-->
+            <div class="button-container">
+              <button class="sign-in-btn" id="button-container">Sign In</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- mobile nav -->
-    <div class="mb_navbar" id="mb_navbar">
-      <button id="cross_btn">
-        <i class="fas fa-times cross-"></i>
-      </button>
-      <div class="mb-search-container">
-        <input type="text" class="mb-search-input" placeholder="Search for products.....">
-        <i class="fas fa-search mb-search-icon"></i>
+      <!-- mobile nav -->
+      <div class="mb_navbar" id="mb_navbar">
+        <button id="cross_btn">
+          <i class="fas fa-times cross-"></i>
+        </button>
+        <div class="mb-search-container">
+          <input
+            type="text"
+            class="mb-search-input"
+            placeholder="Search for products....."
+          />
+          <i class="fas fa-search mb-search-icon"></i>
+        </div>
+        <nav class="mb_nav_container">
+          <ul class="mb_nav_links">
+            <li><a href="ALL">ALL</a></li>
+            <li><a href="shirts">Shirts</a></li>
+            <li><a href="stickers">Stickers</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="mb_nav_container">
-        <ul class="mb_nav_links">
-          <li><a href="ALL">ALL</a></li>
-          <li><a href="shirts">Shirts</a></li>
-          <li><a href="stickers">Stickers</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    </header>
+    <!-- auth modal -->
+    <div class="modal-container" id="my-modal">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Sign In Form (Front of the Card) -->
+          <div class="flip-card-front">
+            <h2>Sign In</h2>
+            <form>
+              <i class="fa-solid fa-xmark close-btn flip-cross-btn"></i>
 
-  <div class="flip-card-container" id="flipCardContainer">
-    <!-- <input type="checkbox" id="flip-checkbox" class="flip-checkbox"> -->
-    <button class="flip-card-button" id="flip-card-button">
-      Click here to signup
-    </button>
-    <button class="flip-cross-btn" id="flip-cross-btn">&times;</button>
-    <div class="flip-card">
-      <!-- Front Side: Sign In -->
-      <div class="flip-card-front">
-        <form>
-          <div class="sign-in-form">
-            <div class="head-text">
-              <h1>SIGN IN</h1>
-            </div>
-            <div class="email-form">
-              <input type="email" class="input-box" placeholder="customer4@gmail.com" required>
-            </div>
-            <div class="password-form">
-              <input type="password" class="input-box" placeholder="Password" required>
-            </div>
-            <button type="submit" class="sig-in-form-btn">Login</button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Back Side: Sign Up Button -->
-      <div class="flip-card-back">
-        <div class="sign-up-form">
-          <div class="signup-text">
-            <h1>SIGN UP</h1>
+              <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text" id="username" required />
+              </div>
+              <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password" id="password" required />
+              </div>
+              <div>
+                <button type="submit" class="signin-btn">Sign In</button>
+              </div>
+              <div class="separator">
+                <div></div>
+                <p>New to Acme?</p>
+                <div></div>
+              </div>
+              <div class="switch">
+                <button type="button">Create your Acme Account</button>
+              </div>
+            </form>
           </div>
 
-          <form>
-            <div class="sign-up-form-group">
-              <label for="fullname">Full Name</label>
-              <input type="text" class="sign-up-boxes" name="fullname" required>
-              <label for="email">Email Address</label>
-              <input type="email" class="sign-up-boxes" name="email" required>
+          <!-- Sign Up Form (Back of the Card) -->
+          <div class="flip-card-back">
+            <h2>Sign Up</h2>
+            <i class="fa-solid fa-xmark close-btn flip-cross-btn"></i>
+
+            <div class="form-input">
+              <label for="fullname">fullname</label>
+              <input type="text" placeholder="fullname" />
+            </div>
+            <div class="form-input">
+              <label for="Email">Email</label>
+              <input type="email" placeholder="prativaneupane2@gmail.com" />
+            </div>
+            <div class="form-input">
               <label for="password">Password</label>
-              <input type="password" class="sign-up-boxes" name="password" required>
-              <label for="confirm-password">Confirm Password</label>
-              <input type="password" class="sign-up-boxes" name="confirm-password" required>
+              <input type="password" placeholder="Password" />
             </div>
-            <button type="submit" class="sign-up-btn">Sign Up</button>
-          </form>
+            <div class="form-input">
+              <label for="conform password">Password</label>
+              <input type="confirm password" placeholder="Confirm Password" />
+            </div>
+            <div>
+              <button type="submit" class="signup-btn">Sign up</button>
+            </div>
+            <div class="separator">
+              <div></div>
+              <p>Already have an account?</p>
+              <div></div>
+            </div>
+            <button class="switch" type="button">
+              click here to Sign In
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script type="module" src="/src/main.js"></script>
-</body>
-
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
